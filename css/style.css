@@ -1,0 +1,367 @@
+body{
+    font-size: 16px;
+    font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: relative;
+}
+.clear:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+a{
+    color: #000;
+    display: inline-block;
+    height: inherit;
+}
+
+.container{
+    width: 96%;
+    margin: 0 auto;
+}
+
+.container nav li{
+    height: 40px;
+    line-height: 40px;
+    float: left;
+}
+.container nav li:after{
+    content: '>';
+    display: inline-block;
+    padding:0 6px;
+}
+.container nav li:last-child:after{
+    content: '';
+}
+.container nav li a:hover{
+    color: #666;
+}
+.container h1{
+    width: 100%;
+    padding: 6px 0;
+    margin: 10px auto;
+    border-bottom: 1px solid #ccc;
+    font-size: 20px;
+    font-weight: normal;
+}
+.container .select li{
+    width: 190px;
+    height: 36px;
+    line-height: 36px;
+    text-indent: 10px;
+    float: left;
+    margin:20px 24px 20px 0;
+    border: 1px solid #cccccc;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.container .select li span{
+    display: block;
+    width: 36px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px;
+    border-left: 1px solid #cccccc;
+    float: right;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.container .handle span{
+    display: inline-block;
+    padding:10px;
+    cursor: pointer;
+}
+.container .handle span:hover{
+    color: #666;
+}
+.container table{
+    table-layout: fixed;
+    width: 60%
+}
+.container table tr{
+    height: 42px;
+    line-height: 42px;
+}
+.container table th{
+    background: #f0f0f0;
+    border: 1px solid #cccccc;
+    border-left: none;
+}
+.container table th,.container table td{
+    text-align: left;
+    padding: 0 6px;
+}
+.container table .input{
+    width: 8%;
+    text-align: center;
+}
+.container table .name,.container table .position{
+    width: 26%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.container table .company-name{
+    width: 40%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.container table tbody tr{
+    color: #0587b9;
+}
+.container table tbody tr:hover{
+    background: #f8f8f8;
+    cursor: pointer;
+}
+
+
+/*客户详情*/
+.info-hide{
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    background: #ffffff;
+    color: #3c3c3c;
+    -webkit-box-shadow:  2px -2px 26px #aaa;
+    -moz-box-shadow:  2px -2px 26px #aaa;
+    box-shadow:  2px -2px 26px #aaa;
+    z-index: 10;
+}
+.info-hide p{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    font-size: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #eaebf0;
+}
+.info-hide .content{
+    width: 94%;
+    margin: 20px auto;
+    background: #ffffff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.info-hide .nav{
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+}
+.info-hide .nav h1{
+    float: left;
+    font-weight: normal;
+    font-size: 20px;
+}
+.info-hide .nav h1>span{
+    color: #00a0e9;
+    margin-right: 6px;
+    font-size: 20px;
+}
+.info-hide .nav .list{
+    float: right;
+}
+.info-hide .nav .list span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    margin: 0 2px;
+    border: 1px solid #cccccc;
+    border-radius: 50%;
+    float: left;
+    text-align: center;
+    background: #eaebf0;
+    color: #999;
+}
+.info-hide .list span:hover{
+    color: #ffffff;
+}
+.info-hide .label{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    margin: 16px 0;
+    position: relative;
+}
+.info-hide .label .add-label{
+    display: block;
+    float: left;
+    cursor: pointer;
+    padding: 0 20px;
+    border: 1px dotted #cccccc;
+    color: #999;
+    font-size: 16px;
+    position: absolute;
+    left: 0;
+}
+
+.info-hide .tab{
+    width: 100%;
+}
+.info-hide .tab li{
+    padding: 4px 10px;
+    border: 1px solid #cccccc;
+    border-bottom: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    float: left;
+    margin-right: 4px;
+    cursor: pointer;
+    position: relative;
+}
+.info-hide .tab li:hover,.info-hide .tab li.active{
+    background: #eaedf2;
+}
+.info-hide .tab li.active:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #eaedf2;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+}
+.info-hide .tab section{
+    width: 100%;
+    /*height: 200px;*/
+    background: #eaedf2;
+    padding: 18px 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-top: 1px solid #cccccc;
+    display: none;
+}
+.info-hide .tab .show{
+    display: block;
+}
+.info-hide .tab .txt{
+    width: 100%;
+    border-bottom: 1px solid #cccccc;
+    /*display: block;*/
+}
+.info-hide .tab textarea{
+    display: block;
+    width: 100%;
+    margin: 0 auto 20px;
+    height: 40px;
+    overflow-y: auto;
+    resize: none;
+    border: none;
+    background: #ffffff;
+
+}
+
+.info-hide .tab .wait{
+    width: 100%;
+    /*height: 50px;*/
+    padding-top: 20px;
+    border-bottom: 1px solid #dddddd;
+}
+.info-hide .tab .wait p{
+    width: 60%;
+    height: auto;
+    line-height: normal;
+    padding: 0;
+    font-size: 16px;
+    float: left;
+}
+.info-hide .tab .wait button{
+    float: right;
+    background: #f8f8f8;
+    padding: 4px 20px;
+    border: 1px solid #cccccc;
+    position: relative;
+    bottom: 6px;
+    cursor: pointer;
+}
+.info-hide .tab .wait button:hover{
+    opacity: 0.9;
+}
+.info-hide .close{
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+.info-hide .close:hover{
+    opacity: 0.8;
+}
+
+.info-hide .event-wrapper{
+    width: 100%;
+    margin-top: 20px;
+}
+.info-hide .event-wrapper .event{
+    width: 100%;
+    position: relative;
+    border-top: 1px solid #cccccc;
+    padding:10px 10px 10px 60px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.info-hide .event-wrapper .event:before{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url("../img/pic1.jpg") no-repeat center center;
+    border-radius: 6px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.info-hide .event p{
+    width: 90%;
+    height: 20px;
+    line-height: 20px;
+    padding: 0;
+    font-size: 14px;
+}
+.info-hide .event .person-name{
+    color: #00a0e9;
+}
+.info-hide .event .event-main{
+    height: auto;
+}
+.info-hide time{
+    font-size: 13px;
+}
+.info-hide .event .reply{
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    text-indent: 6px;
+    overflow-y: auto;
+    margin: 10px 0 0;
+}
+.info-hide .event button{
+    border: none;
+    background: none;
+    font-size: 14px;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+.info-hide .event .btn1{
+    top: 10px;
+}
+.info-hide .event .btn2{
+    top: 50px;
+    color: #00a0e9;
+}

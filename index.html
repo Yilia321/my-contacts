@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的联系人</title>
+    <link rel="stylesheet" href="iconfont/iconfont.css" type="text/css">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+
+<section class="container">
+    <nav>
+        <ul class="clear">
+            <li><a href="#">销售管理</a></li>
+            <li>我的联系人</li>
+        </ul>
+    </nav>
+    <h1>我的联系人</h1>
+    <div class="select">
+        <ul class="clear">
+            <li>Yilia<span class="iconfont">&#xe740;</span></li>
+            <li>全部联系人<span class="iconfont">&#xe740;</span></li>
+        </ul>
+    </div>
+    <div class="handle">
+        <span>删除</span>|<span>转移</span>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th class="input"><input type="checkbox" name="select" id="all"></th>
+                <th class="name">姓名</th>
+                <th class="company-name">公司名称</th>
+                <th class=" position">职位</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td class="input"><input type="checkbox" name="select"></td>
+            <td class="name">Merry</td>
+            <td class="company-name" title="某汽车">某汽车</td>
+            <td class=" position"></td>
+        </tr>
+            <tr>
+                <td class="input"><input type="checkbox" name="select"></td>
+                <td class="name">Jack</td>
+                <td class="company-name" title="xxx技术有限公司">xxx技术有限公司</td>
+                <td class=" position"></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+<div class="info">
+    <div class="info-hide" id="某汽车">
+        <p>客户详情</p>
+        <div class="content">
+            <div class="nav clear">
+                <h1><span class="iconfont">&#xe667;</span>某汽车 <i class="iconfont">&#xe608;</i></h1>
+                <div class="list clear">
+                    <span class="iconfont">&#xe60c;</span>
+                    <span class="iconfont">&#xe63e;</span>
+                    <span class="iconfont">&#xe631;</span>
+                    <span class="iconfont">&#xe676;</span>
+                </div>
+            </div>
+            <div class="label clear">
+                <span class="add-label">+加标签</span>
+            </div>
+            <div class="tab">
+                <ul class="clear">
+                    <li class="active">概况</li>
+                    <li class="">资料</li>
+                    <li class="">联系人</li>
+                    <li class="">合同</li>
+                    <li class="">邮件</li>
+                </ul>
+                <section class="item1 show">
+                    <div class="txt">
+                        <textarea name=""></textarea>
+                    </div>
+                    <div class="wait clear">
+                        <p>待办日程</p>
+                        <button>添加</button>
+                    </div>
+                    <div class="event-wrapper">
+                        <div class="event">
+                            <p class="person-name">小哲</p>
+                            <p class="event-main">12.30,与客户见面，客户希望生成喝查询订单，做订单管理，手机端和电脑端应用</p>
+                            <time>01月18日 9：32</time>
+                            <textarea class="reply" placeholder="快速回复"></textarea>
+                            <button class="btn1">记录</button>
+                            <button class="btn2">删除</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="item2">
+                    资料内容
+                </section>
+                <section class="item3">
+                    联系人内容
+                </section>
+                <section class="item4">
+                    合同内容
+                </section>
+                <section class="item5">
+                    邮件内容
+                </section>
+            </div>
+        </div>
+        <div class="close iconfont">&#xe628;</div>
+    </div>
+    <div class="info-hide" id="xxx技术有限公司">
+        <p>客户详情</p>
+        <div class="content">
+            <div class="nav clear">
+                <h1><span class="iconfont">&#xe667;</span>xxx技术有限公司 <i class="iconfont">&#xe608;</i></h1>
+                <div class="list clear">
+                    <span class="iconfont">&#xe60c;</span>
+                    <span class="iconfont">&#xe63e;</span>
+                    <span class="iconfont">&#xe631;</span>
+                    <span class="iconfont">&#xe676;</span>
+                </div>
+            </div>
+            <div class="label clear">
+                <span class="add-label">+加标签</span>
+            </div>
+            <div class="tab">
+                <ul class="clear">
+                    <li class="active">概况</li>
+                    <li class="">资料</li>
+                    <li class="">联系人</li>
+                    <li class="">合同</li>
+                    <li class="">邮件</li>
+                </ul>
+                <section class="item1 show">
+                    <div class="txt">
+                        <textarea name=""></textarea>
+                    </div>
+                    <div class="wait clear">
+                        <p>待办日程</p>
+                        <button>添加</button>
+                    </div>
+
+                </section>
+                <section class="item2">
+                    资料内容
+                </section>
+                <section class="item3">
+                    联系人内容
+                </section>
+                <section class="item4">
+                    合同内容
+                </section>
+                <section class="item5">
+                    邮件内容
+                </section>
+            </div>
+        </div>
+        <div class="close iconfont">&#xe628;</div>
+    </div>
+</div>
+</body>
+</html>
